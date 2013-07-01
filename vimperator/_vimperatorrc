@@ -2,7 +2,7 @@
 colorscheme vimPgray
 
 "Change link UI ("Hints")
-:highlight Hint font-family: monospace; font-size: 12px; font-weight: bold; text-transform: uppercase; color: white; background-color: green; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px;
+:highlight Hint font-family: monospace; font-size: 11px; font-weight: bold; text-transform: uppercase; color: white; background-color: green; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px;
 
 
 """"""""""Bindings
@@ -20,6 +20,12 @@ colorscheme vimPgray
 
 "Add dictionary to alt-shift-d
 :map <A-S-d> :open http://dictionary.reference.com/browse/
+
+
+""""""""""Quickmarks
+:qmark o www.outlook.com/owa/microsoft.com
+:qmark g www.gmail.com
+:qmark s www.stackoverflow.com
 
 
 """"""""""Misc
