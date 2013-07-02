@@ -15,6 +15,9 @@ colorscheme vimPgray
 "control-a selects all in insert mode
 :inoremap <C-a> <Ins><C-a><Ins>
 
+"tab in insert mode... inserts a tab
+:imap <Tab> <Nop>
+
 "private window
 :map <C-S-n> :winopen<Space>-private<Return>
 
