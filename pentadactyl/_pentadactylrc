@@ -18,6 +18,9 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 :map <S-J> :tabprev<CR>
 :map <S-K> :tabnext<CR>
 
+"Copying stuff. We lose the ability to stop the page from loading... but don't think I appreciate insert/caret/textarea mode sufficiently anyways
+:map <C-c> <C-v><C-c>
+
 "Insert mode hacks... not sure what the better hotkeys would be
 :imap -builtin <C-a> <C-v><C-a>
 :imap -builtin <C-v> <C-v><C-v>
