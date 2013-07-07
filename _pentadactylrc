@@ -1,0 +1,58 @@
+""""""""""Helpful links
+"https://code.google.com/p/dactyl/issues/detail?id=1003
+"http://superuser.com/a/98839/235866
+
+""""""""""Aesthetics
+hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
+
+""""""""""Fix hinttags so it finds more elements
+:set hinttags+=a
+
+""""""""""Bindings
+"Scrolling
+:map -builtin j 5j
+:map -builtin k 5k
+:map <A-j> <C-d>
+:map <A-k> <C-u>
+
+:map <S-J> :tabprev<CR>
+:map <S-K> :tabnext<CR>
+
+"Copying stuff. We lose the ability to stop the page from loading... but don't think I appreciate insert/caret/textarea mode sufficiently anyways
+:map <C-c> <C-v><C-c>
+
+:vmap <C-Tab> <C-v><C-Tab>
+:vmap <C-S-Tab> <C-v><C-S-Tab>
+
+"Insert mode hacks... not sure what the better hotkeys would be
+:imap -builtin <C-a> <C-v><C-a>
+:imap -builtin <C-v> <C-v><C-v>
+:imap -builtin <C-z> <C-v><C-z>
+
+"private window
+:map <C-S-n> :private<Space>winopen<CR>
+
+"Add dictionary to alt-shift-d
+:map <A-S-d> :open http://dictionary.reference.com/browse/
+
+
+""""""""""Quickmarks
+:qmark o www.outlook.com/owa/microsoft.com
+:qmark g www.gmail.com
+:qmark s www.stackoverflow.com
+:qmark w www.weather.com/weather/today/Redmond+WA+98052:4:US
+
+
+""""""""""Misc
+"Set startpage.com as the default search when using :open/:tabopen
+:set defsearch=startpage
+
+"tab numbers (#gt)
+"TODO: fix this :set tabnumbers
+
+"use chars instead of the silly number system
+:set hintkeys=asdfjklertuioxcvnm
+
+"visual bell
+:set visualbell
+
