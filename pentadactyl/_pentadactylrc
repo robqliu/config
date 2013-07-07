@@ -2,11 +2,10 @@
 "https://code.google.com/p/dactyl/issues/detail?id=1003
 "http://superuser.com/a/98839/235866
 
+
 """"""""""Aesthetics
 hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
 
-""""""""""Fix hinttags so it finds more elements
-:set hinttags+=a
 
 """"""""""Bindings
 "Scrolling
@@ -18,7 +17,8 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 :map <S-J> :tabprev<CR>
 :map <S-K> :tabnext<CR>
 
-"Copying stuff. We lose the ability to stop the page from loading... but don't think I appreciate insert/caret/textarea mode sufficiently anyways
+"Copying stuff. We lose the ability to stop the page from loading... 
+"but don't think I appreciate insert/caret/textarea mode sufficiently anyways
 :map <C-c> <C-v><C-c>
 
 :vmap <C-Tab> <C-v><C-Tab>
@@ -33,7 +33,7 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 :map <C-S-n> :private<Space>winopen<CR>
 
 "Add dictionary to alt-shift-d
-:map <A-S-d> :open http://dictionary.reference.com/browse/
+:map <A-S-d> :tabopen<Space>dictionary<Space>
 
 
 """"""""""Quickmarks
@@ -41,11 +41,12 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 :qmark g www.gmail.com
 :qmark s www.stackoverflow.com
 :qmark w www.weather.com/weather/today/Redmond+WA+98052:4:US
+:qmark m www.metafilter.com
 
 
 """"""""""Misc
 "Set startpage.com as the default search when using :open/:tabopen
-:set defsearch=startpage
+:set defsearch=ixquick
 
 "tab numbers (#gt)
 "TODO: fix this :set tabnumbers
@@ -55,4 +56,7 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 
 "visual bell
 :set visualbell
+
+"Fix hinttags so it finds more elements
+:set hinttags+=a
 

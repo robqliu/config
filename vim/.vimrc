@@ -1,43 +1,51 @@
-" ftplugin
-filetype plugin indent on
+" make it incompatible with vi. necessary for some vim settings. 
+" supposed to go first in the .vimrc
+set nocompatible
 
-" syntax highlighting
-syntax enable
+" remove all autocmds in this group (all autocmds in this vimrc 
+" use the same group). allows sourcing this .vimrc multiple times without
+" accidentally redefining autocmds (<- what's actually wrong with this? no
+" idea)
+augroup uservimrc
+au!
+" all autocmds defined below will be in uservimrc... we restore
+" the previous augroup at the end
 
-" Adds menu when you do :e/:vsp/need to look at local files
-set wildmenu
-
-" Line number
-set number
-
-" Search
-set incsearch
-
-" Color settings
-set t_Co=256
-set background=dark
-colo robert
-" let g:solarized_termcolors=256
-" colorscheme solarized
-
-" Window width
-set textwidth=80
-
-" tabbing settings
-set cindent
-
-" replaces error beep
-set visualbell
-
-" save cursor location
-if has("autocmd")
-   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-     \| exe "normal g'\"" | endif
+" **************************OS specific settings
+if has("win32") || has("win64")
+	au BufWritePost .vimrc source $MYVIMRC
+elseif has("unix")
+	au BufWritePost .vimrc source %
 endif
 
+" turns on filetype detection, filetype plugins, and filetype indent files
+filetype plugin indent on
+
+" ============================ General ============================ 
+syntax on		" syntax highlighting
+set incsearch		" match while typing
+set number		" show line numbers
+set wildmenu		" adds menu when you do :e/:vsp/need to look at local 
+			" files
+set visualbell		" replaces error beep
+set textwidth=80	" auto insert newline
+set ruler		" display cursor position on statusline
+set showcmd		" displays some status information for a command (e.g.
+			" the number of lines when selecting multiple lines
+
+" color settings
+set t_Co=256
+colo robert
+
+" save cursor location when closing/opening file
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+
 " highlight >80
-hi OverLength ctermbg=59 ctermfg=white guibg=#592929
+hi OverLength ctermbg=DarkGreen ctermfg=White guifg=White guibg=DarkGreen
 match OverLength /\%>80v.\+/
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" restore the normal augroup
+augroup end

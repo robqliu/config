@@ -1,5 +1,5 @@
-set sw=4
-set ts=4
-set expandtab
+setlocal sw=4
+setlocal ts=4
+setlocal expandtab
 setlocal smarttab
-set nosmartindent
+setlocal nosmartindent
