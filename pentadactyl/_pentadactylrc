@@ -21,8 +21,15 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 "but don't think I appreciate insert/caret/textarea mode sufficiently anyways
 :map <C-c> <C-v><C-c>
 
-:vmap <C-Tab> <C-v><C-Tab>
-:vmap <C-S-Tab> <C-v><C-S-Tab>
+"For sites which support arrows for navigation (e.g. outlook). Plus, what do I
+"use arrows for in normal mode?
+:nmap <Left> <C-v><Left>
+:nmap <Right> <C-v><Right>
+:nmap <Up> <C-v><Up>
+:nmap <Down> <C-v><Down>
+
+":vmap <C-Tab> <C-v><C-Tab>
+":vmap <C-S-Tab> <C-v><C-S-Tab>
 
 "Insert mode hacks... not sure what the better hotkeys would be
 :imap -builtin <C-a> <C-v><C-a>
