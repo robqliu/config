@@ -28,7 +28,6 @@ set number		" show line numbers
 set wildmenu		" adds menu when you do :e/:vsp/need to look at local 
 			" files
 set visualbell		" replaces error beep
-set textwidth=80	" auto insert newline
 set ruler		" display cursor position on statusline
 set showcmd		" displays some status information for a command (e.g.
 			" the number of lines when selecting multiple lines
@@ -39,10 +38,6 @@ colo robert
 
 " save cursor location when closing/opening file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
-" highlight >80
-hi OverLength ctermbg=DarkGreen ctermfg=White guifg=White guibg=DarkGreen
-match OverLength /\%>80v.\+/
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
