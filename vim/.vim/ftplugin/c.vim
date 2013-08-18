@@ -1,2 +1,2 @@
-:setlocal cindent
+setlocal cindent
 
