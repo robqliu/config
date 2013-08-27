@@ -5,7 +5,7 @@ set nocompatible
 " remove all autocmds in this group (all autocmds in this vimrc 
 " use the same group). allows sourcing this .vimrc multiple times without
 " accidentally redefining autocmds (<- what's actually wrong with this? no
-" idea)
+" idea))
 augroup uservimrc
 au!
 " all autocmds defined below will be in uservimrc... we restore

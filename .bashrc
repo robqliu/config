@@ -12,6 +12,20 @@ export SVN_EDITOR=/usr/bin/vim
 # Ignore .svn when grepping
 export GREP_OPTIONS=--exclude-dir=".svn"
 
+# add color to ls and grep if possible
+if [ -x /usr/bin/dircolors ]; 
+then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
+	# make ls more awesome
+	alias ls='ls --color=auto --group-directories-first'
+
+	# make grep more awesome
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+fi
+
 # Change magenta filename coloring (blends too well with black background)
 export GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=33:ln=32:bn=32:se=36'
 
@@ -27,4 +41,3 @@ export PATH=/usr/local/bin/opt/bin:$PATH
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 # Linking shared objects
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
-
