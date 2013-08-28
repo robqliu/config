@@ -11,11 +11,9 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 "Scrolling
 :map -builtin j 13j
 :map -builtin k 13k
-:map <S-J> <C-d>
-:map <S-K> <C-u>
 
-:map <S-H> :tabprev<CR>
-:map <S-L> :tabnext<CR>
+:map <S-J> :tabprev<CR>
+:map <S-K> :tabnext<CR>
 
 "Copying stuff. We lose the ability to stop the page from loading...
 "We also lose insert/caret/textarea mode but I don't think I care about them sufficiently anyways
