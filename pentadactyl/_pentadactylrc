@@ -26,8 +26,9 @@ hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding
 :nmap <Up> <C-v><Up>
 :nmap <Down> <C-v><Down>
 
-":vmap <C-Tab> <C-v><C-Tab>
-":vmap <C-S-Tab> <C-v><C-S-Tab>
+"Lose the ability to do the auto-increment url thing, but selecting all
+"but not sure how else I might select all easily
+nmap <C-a> <C-v><C-a>
 
 "Insert mode hacks... not sure what the better hotkeys would be
 :imap -builtin <C-a> <C-v><C-a>

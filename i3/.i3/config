@@ -16,8 +16,8 @@ font pango:Ubuntu, Bold 10
 
 # ******************* Colors ********************
 # class			border	backgr.	text	indicator
-client.focused		#a8a8a8	#58bd53	#000000	#ffffff
-client.focused_inactive #a8a8a8 #eaf07d #000000	#ffffff
+client.focused		#a8a8a8	#8bf13c	#000000	#ffffff
+client.focused_inactive #a8a8a8 #fffa40 #000000	#ffffff
 client.unfocused        #a8a8a8 #171717 #a1a1a1 #ffffff
 
 # defaults
@@ -59,7 +59,7 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # quickswitch for i3 (i.e. buffer menu)
-#bindsym $mod+Tab exec quickswitch.py
+bindsym $mod+Tab exec quickswitch.py
 
 # ******************* Move container ********************
 # move focused container
@@ -187,11 +187,16 @@ bindsym $mod+Shift+E exit
 bar {
         status_command i3status
 	mode dock
-	font pango:Ubuntu Mono, 11
+	font pango:Ubuntu, Bold 11
 	tray_output primary
 	colors {
+		background #000000
 		statusline #e0e0e0
-	}
+		separator #ff0000
+
+		#colorclass		border	backgr.	text
+		focused_workspace	#8bf13c	#439400 #000000
+		active_workspace	#fffa40 #ffff00 #000000 }
 
 	# defaults
 #	colors {
