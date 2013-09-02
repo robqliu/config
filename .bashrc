@@ -7,6 +7,7 @@ alias val123='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes
 --num-callers=20 --track-fds=yes'
 
 export EDITOR=/usr/bin/vim
+
 # svn editor (e.g. commit mesages)
 export SVN_EDITOR=/usr/bin/vim
 # Ignore .svn when grepping

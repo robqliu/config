@@ -1,0 +1,2 @@
+-Settings are in $HOME/.Xresources
+-Requires urxvt-font-size: https://github.com/majutsushi/urxvt-font-size
