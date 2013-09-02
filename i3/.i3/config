@@ -29,7 +29,7 @@ client.unfocused        #a8a8a8 #171717 #a1a1a1 #ffffff
 # ******************* Defaults ********************
 default_orientation horizontal
 workspace_layout tabbed
-new_window pixel 1
+new_window pixel 3
 # TODO: This seems to break new_window if I use... say pixel 5
 # new_float pixel 1
 hide_edge_borders vertical
@@ -57,6 +57,9 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindcode $mod+d focus child
+
+# quickswitch for i3 (i.e. buffer menu)
+#bindsym $mod+Tab exec quickswitch.py
 
 # ******************* Move container ********************
 # move focused container
