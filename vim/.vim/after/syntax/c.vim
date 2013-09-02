@@ -14,7 +14,6 @@
 "   0.2 - change [] to operator
 "   0.1 - initial upload, modification from vimscript#1201, Extended c.vim
 
-
 " Common ANSI-standard functions
 syn keyword cAnsiFunction	MULU_ DIVU_ MODU_ MUL_ DIV_ MOD_
 syn keyword cAnsiFunction	main typeof
@@ -276,4 +275,3 @@ hi def link cDelimiter Delimiter
 " foldmethod=syntax fix, courtesy of Ivan Freitas
 hi def link cBraces Delimiter
 hi def link cBoolean Boolean
-
