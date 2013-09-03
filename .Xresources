@@ -29,6 +29,7 @@ URxvt*font: xft:inconsolata:size=10
 
 ! 
 ! URxvt*color3       (yellow)           = Yellow3
+URxvt*color3: Black
 
 ! 
 ! URxvt*color4       (blue)             = Blue3
@@ -66,15 +67,12 @@ URxvt*font: xft:inconsolata:size=10
 ! 
 ! URxvt*color15      (bright white)     = White
 
-! 
-URxvt*foreground: White
-
-! It is also possible to specify the colour values of foreground, background,
-URxvt*background: Grey25
+URxvt.foreground: White
+URxvt.background: Grey15
 
 ! ******************************* Perl extensions *******************************
 ! font-size perl script
-URxvt*perl-ext-common: font-size
+URxvt.perl-ext-common: font-size
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
