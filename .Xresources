@@ -68,7 +68,7 @@ URxvt*color3: Black
 ! URxvt*color15      (bright white)     = White
 
 URxvt.foreground: White
-URxvt.background: Grey15
+URxvt.background: Grey10
 
 ! ******************************* Perl extensions *******************************
 ! font-size perl script
