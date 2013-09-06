@@ -34,9 +34,6 @@ nmap <C-a> <C-v><C-a>
 :imap -builtin <C-a> <C-v><C-a>
 :imap -builtin <C-v> <C-v><C-v>
 :imap -builtin <C-z> <C-v><C-z>
-"gmail tabbing
-:imap -builtin <C-]> <C-v><C-]>
-:imap -builtin <C-[> <C-v><C-[>
 
 "private window
 :map <C-S-n> :private<Space>winopen<CR>
@@ -53,15 +50,23 @@ nmap <C-a> <C-v><C-a>
 :qmark m www.metafilter.com
 
 
+""""""""""Hints
+"use chars instead of the silly number system
+:set hintkeys=asdfjklertuioxcvnm
+
+"Remove the hint text
+:highlight Hint::after content: attr(number) !important;
+
+""""""""""Site-specific
+"gmail tabbing
+:set passkeys+=mail.google.com:<C-]>,<C-[>
+
 """"""""""Misc
 "Set startpage.com as the default search when using :open/:tabopen
 :set defsearch=ixquick
 
 "tab numbers (#gt)
 "TODO: fix this :set tabnumbers
-
-"use chars instead of the silly number system
-:set hintkeys=asdfjklertuioxcvnm
 
 "visual bell
 :set visualbell
