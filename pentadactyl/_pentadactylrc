@@ -4,7 +4,7 @@
 
 
 """"""""""Aesthetics
-hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
+hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding: 0 2px 0 1px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform: uppercase;
 
 
 """"""""""Bindings
@@ -59,9 +59,6 @@ nmap <C-a> <C-v><C-a>
 
 "tab numbers (#gt)
 "TODO: fix this :set tabnumbers
-
-"use chars instead of the silly number system
-:set hintkeys=asdfjklertuioxcvnm
 
 "visual bell
 :set visualbell
