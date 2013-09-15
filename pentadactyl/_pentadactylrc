@@ -60,6 +60,7 @@ nmap <C-a> <C-v><C-a>
 """"""""""Site-specific
 "gmail tabbing
 :set passkeys+=mail.google.com:<C-]>,<C-[>
+:set passkeys+=stackoverflow.com:<Tab>
 
 """"""""""Misc
 "Set startpage.com as the default search when using :open/:tabopen
