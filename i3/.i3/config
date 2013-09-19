@@ -55,6 +55,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# turn off focus follows mouse
+focus_follows_mouse no
+
 # focus the child container
 #bindcode $mod+d focus child
 
