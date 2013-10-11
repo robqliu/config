@@ -11,17 +11,17 @@ au!
 " all autocmds defined below will be in uservimrc... we restore
 " the previous augroup at the end
 
-" **************************OS specific settings
+" ============================ OS specific  ============================ 
 if has("win32") || has("win64")
 	au BufWritePost .vimrc source $MYVIMRC
 elseif has("unix")
 	au BufWritePost .vimrc source %
 endif
 
+" ============================ General ============================ 
 " turns on filetype detection, filetype plugins, and filetype indent files
 filetype plugin indent on
 
-" ============================ General ============================ 
 syntax on		" syntax highlighting
 set incsearch		" match while typing
 set number		" show line numbers

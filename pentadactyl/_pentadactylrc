@@ -4,7 +4,8 @@
 
 
 """"""""""Aesthetics
-hi Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
+:highlight Hint font: bold 11px "Consolas", monospace !important; margin: -.2ex; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
+:highlight TabNumber font: bold 14px "Consolas", monospace; margin: 0px; padding-right: .3ex; cursor: 3efault;
 
 
 """"""""""Bindings
@@ -67,11 +68,10 @@ nmap <C-a> <C-v><C-a>
 :set defsearch=ixquick
 
 "tab numbers (#gt)
-"TODO: fix this :set tabnumbers
+:set guioptions+=n
 
 "visual bell
 :set visualbell
 
 "Fix hinttags so it finds more elements
-:set hinttags+=a
-
+:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true],a[href]
