@@ -264,4 +264,7 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
 };
-ignores = ( { mask = "Java"; level = "ALL"; } );
+ignores = (
+  { mask = "Java"; level = "ALL"; },
+  { mask = "Guest96230"; level = "ALL"; }
+);
