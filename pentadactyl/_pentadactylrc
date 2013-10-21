@@ -52,6 +52,9 @@ nmap <C-a> <C-v><C-a>
 
 
 """"""""""Hints
+"Fix hinttags so it finds more elements
+:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,a,[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true]
+
 "use chars instead of the silly number system
 :set hintkeys=asdfjklertuioxcvnm
 
@@ -65,7 +68,7 @@ nmap <C-a> <C-v><C-a>
 
 """"""""""Misc
 "Set startpage.com as the default search when using :open/:tabopen
-:set defsearch=ixquick
+:set defsearch=duckduckgo
 
 "tab numbers (#gt)
 :set guioptions+=n
@@ -73,5 +76,3 @@ nmap <C-a> <C-v><C-a>
 "visual bell
 :set visualbell
 
-"Fix hinttags so it finds more elements
-:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true],a[href]

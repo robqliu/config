@@ -266,5 +266,6 @@ settings = {
 };
 ignores = (
   { mask = "Java"; level = "ALL"; },
-  { mask = "Guest96230"; level = "ALL"; }
+  { mask = "Guest96230"; level = "ALL"; },
+  { mask = "Unpleasantry"; level = "ALL"; }
 );
