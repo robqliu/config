@@ -31,7 +31,7 @@ default_orientation horizontal
 workspace_layout tabbed
 
 # ******************* Borders ********************
-new_window pixel none
+new_window none
 hide_edge_borders both
 
 # set $mod variable to Alt == Mod1
