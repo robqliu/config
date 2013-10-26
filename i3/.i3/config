@@ -16,9 +16,9 @@ font pango:Ubuntu, Bold 10
 
 # ******************* Colors ********************
 # class			border	backgr.	text	indicator
-client.focused		#a8a8a8	#8bf13c	#000000	#ffffff
-client.focused_inactive #a8a8a8 #fffa40 #000000	#ffffff
-client.unfocused        #a8a8a8 #171717 #a1a1a1 #ffffff
+client.focused		#5fed5f	#5fed5f	#000000	#ffffff
+client.focused_inactive #dba348 #dba348 #000000	#ffffff
+client.unfocused        #171717 #171717 #a1a1a1 #ffffff
 
 # defaults
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4
@@ -29,10 +29,10 @@ client.unfocused        #a8a8a8 #171717 #a1a1a1 #ffffff
 # ******************* Defaults ********************
 default_orientation horizontal
 workspace_layout tabbed
-new_window pixel 3
-# TODO: This seems to break new_window if I use... say pixel 5
-# new_float pixel 1
-hide_edge_borders vertical
+
+# ******************* Borders ********************
+new_window pixel none
+hide_edge_borders both
 
 # set $mod variable to Alt == Mod1
 set $mod Mod1
