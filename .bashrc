@@ -2,7 +2,8 @@
 set nobeep
 
 # gcc and valgrind flags
-alias c123='gcc -W -Wextra -Wall -O2'
+alias c123='gcc -Wextra -Wall -O2'
+alias g123='g++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings'
 alias val123='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes
 --num-callers=20 --track-fds=yes'
 

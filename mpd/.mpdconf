@@ -201,7 +201,9 @@ input {
 audio_output {
 	type		"alsa"
 	name		"My ALSA Device"
-	device		"hw:0,0"	# optional
+	# For some reason letting mpd determine this setting allows me
+	# to play other audio outputting programs at the same time
+	#device		"hw:0,0"	# optional
 	format		"44100:16:2"	# optional
 	mixer_device	"default"	# optional
 	mixer_control	"PCM"		# optional
