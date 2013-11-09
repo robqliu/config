@@ -449,7 +449,7 @@ mpd_music_dir = "~/shared/music_library"
 #
 #allow_physical_directories_deletion = "no"
 #
-external_editor = "/usr/bin/vim"
+external_editor = "i3-sensible-terminal -e /usr/bin/vim"
 #
 #use_console_editor = "no" (set to yes, if your editor is console app)
 #
