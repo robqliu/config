@@ -18,7 +18,8 @@ font pango:Ubuntu, Bold 10
 # class			border	backgr.	text	indicator
 client.focused		#5fed5f	#5fed5f	#000000	#ffffff
 client.focused_inactive #dba348 #dba348 #000000	#ffffff
-client.unfocused        #171717 #171717 #a1a1a1 #ffffff
+client.unfocused        #333333 #000000 #a1a1a1 #ffffff
+#client.unfocused        #171717 #171717 #a1a1a1 #ffffff
 
 # defaults
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4
@@ -32,7 +33,7 @@ workspace_layout tabbed
 
 # ******************* Borders ********************
 new_window 1pixel
-#hide_edge_borders none
+#hide_edge_borders both
 
 # set $mod variable to Alt == Mod1
 set $mod Mod1
