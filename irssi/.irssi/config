@@ -268,5 +268,7 @@ ignores = (
   { mask = "Java"; level = "ALL"; },
   { mask = "Guest96230"; level = "ALL"; },
   { mask = "Unpleasantry"; level = "ALL"; },
-  { mask = "Martinlemaitre"; level = "ALL"; }
+  { mask = "Martinlemaitre"; level = "ALL"; },
+  { mask = "war877"; level = "ALL"; },
+  { mask = "war632"; level = "ALL"; }
 );

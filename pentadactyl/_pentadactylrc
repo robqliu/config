@@ -29,7 +29,7 @@
 
 "Lose the ability to do the auto-increment url thing, but selecting all
 "but not sure how else I might select all easily
-nmap <C-a> <C-v><C-a>
+:nmap <C-a> <C-v><C-a>
 
 "Insert mode hacks... not sure what the better hotkeys would be
 :imap -builtin <C-a> <C-v><C-a>
