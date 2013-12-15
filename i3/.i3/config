@@ -200,7 +200,8 @@ bar {
 
 		#colorclass		border	backgr.	text
 		focused_workspace	#8bf13c	#439400 #000000
-		active_workspace	#fffa40 #ffff00 #000000 }
+		active_workspace	#fffa40 #ffff00 #000000
+	}
 
 	# defaults
 #	colors {
