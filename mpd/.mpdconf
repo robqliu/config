@@ -198,17 +198,26 @@ input {
 #
 # An example of an ALSA output:
 #
+#audio_output {
+#	type		"alsa"
+#	name		"My ALSA Device"
+#	# For some reason letting mpd determine this setting allows me
+#	# to play other audio outputting programs at the same time
+#	#device		"hw:0,0"	# optional
+#	format		"44100:16:2"	# optional
+#	mixer_device	"default"	# optional
+#	mixer_control	"PCM"		# optional
+#	mixer_index	"0"		# optional
+#}
+
+#
+# Use JACK for recording
+#
 audio_output {
-	type		"alsa"
-	name		"My ALSA Device"
-	# For some reason letting mpd determine this setting allows me
-	# to play other audio outputting programs at the same time
-	#device		"hw:0,0"	# optional
-	format		"44100:16:2"	# optional
-	mixer_device	"default"	# optional
-	mixer_control	"PCM"		# optional
-	mixer_index	"0"		# optional
+	type		"jack"
+	name 		"MPD JACK output"
 }
+
 #
 # An example of an OSS output:
 #

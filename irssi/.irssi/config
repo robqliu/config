@@ -270,5 +270,6 @@ ignores = (
   { mask = "Unpleasantry"; level = "ALL"; },
   { mask = "Martinlemaitre"; level = "ALL"; },
   { mask = "war877"; level = "ALL"; },
-  { mask = "war632"; level = "ALL"; }
+  { mask = "war632"; level = "ALL"; },
+  { mask = "_veer"; level = "ALL"; }
 );
