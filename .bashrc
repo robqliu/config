@@ -5,8 +5,7 @@ set nobeep
 alias gcc='gcc -Wextra -Wall -O2'
 alias g++='g++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings'
 alias gppcf='g++ -static -fno-optimize-sibling-calls -fno-strict-aliasing -DONLINE_JUDGE -lm -s -x c++ -O2'
-alias val123='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes
---num-callers=20 --track-fds=yes'
+alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes'
 
 # clang flags
 alias clang='clang -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings'
