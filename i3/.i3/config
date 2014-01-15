@@ -60,7 +60,7 @@ bindsym $mod+a focus parent
 focus_follows_mouse no
 
 # focus the child container
-#bindcode $mod+d focus child
+bindsym $mod+z focus child
 
 # quickswitch for i3 (i.e. buffer menu)
 bindsym $mod+Tab exec quickswitch.py
@@ -181,7 +181,8 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
+bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#
 
 # ******************* i3bar ********************
 # Note: i3bar uses the same configuration as i3 despite being separate projects
