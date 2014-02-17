@@ -29,7 +29,7 @@ URxvt*font: xft:inconsolata:size=10
 
 ! 
 ! URxvt*color3       (yellow)           = Yellow3
-URxvt*color3: Black
+!URxvt*color3: Black
 
 ! 
 ! URxvt*color4       (blue)             = Blue3
