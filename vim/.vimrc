@@ -43,9 +43,9 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'
 nmap <F8> :TagbarToggle<CR>
 
 " ctags
-" Search the current directory for a tags folder, otherwise go up the
-" directory tree to root
-set tags=./tags,./.git/tags;/
+" Search for tags in current file's directory up to root
+" Search for .git/tags in current file's directory up to root
+set tags=./tags;/,./.git/tags;/
 
 " restore the normal augroup
 augroup end
