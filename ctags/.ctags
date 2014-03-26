@@ -2,9 +2,9 @@
 
 --langdef=js
 --langmap=js:.js
---regex-js=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*\{/\1/,object/
---regex-js=/([A-Za-z0-9._$()]+)[ \t]*[:=][ \t]*function[ \t]*\(/\1/,function/
---regex-js=/function[ \t]+([A-Za-z0-9._$]+)[ \t]*\(([^)])\)/\1/,function/
---regex-js=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*\[/\1/,array/
---regex-js=/([^= ]+)[ \t]*=[ \t]*[^"]'[^']*/\1/,string/
---regex-js=/([^= ]+)[ \t]*=[ \t]*[^']"[^"]*/\1/,string/
+--regex-js=/^\s*(var)?\s*([a-z0-9._$]+)\s*[:=]\s*function/\2/f,function/ei
+--regex-js=/^\s*function\s+([a-z0-9._$]+)\s*\(([^)])\)/\1/f,function/ei
+--regex-js=/^\s*var\s*([-a-z0-9._$]+)\s*=/\1/v,variables/ei
+--regex-js=/^\s*const\s*([-a-z0-9._$]+)\s*=/\1/c,constants/ei
+--regex-js=/^\s*([-a-z0-9._$]+\.)([-a-z0-9._$]+)\s*=/\2/p,properties/ei
+--regex-js=/^\s*([-a-z0-9._$]+)\s*:/\1/p,properties/ei
