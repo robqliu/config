@@ -1,2 +1,5 @@
--Settings are in $HOME/.Xresources
--Requires urxvt-font-size: https://github.com/majutsushi/urxvt-font-size
+Symbolic Links:
+$HOME/.Xresources -> .Xresources
+$HOME/.urxvt/ext/font-size -> font-size
+
+-urxvt-font-size repo: https://github.com/majutsushi/urxvt-font-size
