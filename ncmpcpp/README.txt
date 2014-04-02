@@ -1,0 +1,2 @@
+unix
+-$HOME/.ncmpcpp -> ncmpcpp
