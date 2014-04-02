@@ -25,5 +25,5 @@ load_default_rc = True
 # Snow is monochrome and default88 uses 88 colors.
 colorscheme = 'robert'
 
-# Show hidden
-show_hidden = True
+# Show hidden. Use zh instead!
+#show_hidden = True
