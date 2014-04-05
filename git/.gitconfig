@@ -4,7 +4,11 @@
 # Linux
 [core]
 	excludesfile = $HOME/.gitignore
-
 # Windows
 #[core]
 #	excludesfile = %HOMEDRIVE%%HOMEPATH%/.gitignore
+
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
