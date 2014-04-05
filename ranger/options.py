@@ -18,7 +18,7 @@ from ranger.api.options import *
 
 # Load the deault rc.conf file?  If you've copied it to your configuration
 # direcory, then you should deactivate this option.
-load_default_rc = False
+load_default_rc = True
 
 # Which colorscheme to use?  These colorschemes are available by default:
 # default, default88, jungle, snow

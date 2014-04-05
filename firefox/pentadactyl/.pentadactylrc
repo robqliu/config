@@ -7,8 +7,6 @@
 :highlight Hint font-weight: bold !important; font-size: 11px !important; font-family: monospace !important; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
 ":highlight HintElem /* The hintable element */ background-color: yellow !important; color: black !important; min-width: 12px; display: inline-block;
 :highlight TabNumber font-weight: bold !important; font-size: 14px !important; font-family: monospace !important; margin: 0px; padding-right: .3ex; cursor: default;
-:highlight FontFixed -append font-size: 13px;
-:highlight TabText -append font-size: 13px;
 
 
 """"""""""Bindings
@@ -21,23 +19,23 @@
 
 "Copying stuff. We lose the ability to stop the page from loading...
 "We also lose insert/caret/textarea mode but I don't think I care about them sufficiently anyways
-:map <C-c> <Pass>
+:map <C-c> <C-v><C-c>
 
 "For sites which support arrows for navigation (e.g. outlook). Plus, what do I
 "use arrows for in normal mode?
-:map <Left> <Pass>
-:map <Right> <Pass>
-:map <Up> <Pass>
-:map <Down> <Pass>
+:nmap <Left> <C-v><Left>
+:nmap <Right> <C-v><Right>
+:nmap <Up> <C-v><Up>
+:nmap <Down> <C-v><Down>
 
 "Lose the ability to do the auto-increment url thing, but selecting all
 "but not sure how else I might select all easily
-:nmap <C-a> <Pass>
+:nmap <C-a> <C-v><C-a>
 
 "Insert mode hacks... not sure what the better hotkeys would be
-:imap <C-a> <Pass>
-:imap <C-v> <Pass>
-:imap <C-z> <Pass>
+:imap -builtin <C-a> <C-v><C-a>
+:imap -builtin <C-v> <C-v><C-v>
+:imap -builtin <C-z> <C-v><C-z>
 
 "private window
 :map <C-S-n> :private<Space>winopen<CR>
