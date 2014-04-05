@@ -11,7 +11,7 @@ exec nm-applet
 # ******************* Fonts ********************
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:Ubuntu, Bold 10
+font pango:Ubuntu, Bold 8
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 
 # ******************* Colors ********************
@@ -33,7 +33,6 @@ workspace_layout tabbed
 
 # ******************* Borders ********************
 new_window 1pixel
-#hide_edge_borders both
 
 # set $mod variable to Alt == Mod1
 set $mod Mod1
@@ -145,10 +144,10 @@ mode "resize" {
         bindsym Mod1+Shift+l resize grow width 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
-        bindsym 113 resize shrink width 10 px or 10 ppt 
-        bindsym 116 resize grow height 10 px or 10 ppt
-        bindsym 111 resize shrink height 10 px or 10 ppt
-        bindsym 114 resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt 
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -156,6 +155,17 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# ******************* Audio Bindings ********************
+# Laptop
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%-
+bindsym XF86AudioMute exec amixer -D pulse -q set Master toggle
+
+# ******************* Brightness Bindings ********************
+# Laptop
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10%
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10%
 
 # ******************* Miscellaneous ********************
 # enter fullscreen mode for the focused container
