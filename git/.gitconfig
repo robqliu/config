@@ -3,7 +3,7 @@
 	email = none@none.com
 # Linux
 [core]
-	excludesfile = $HOME/.gitignore
+	excludesfile = ~/.gitignore
 # Windows
 #[core]
 #	excludesfile = %HOMEDRIVE%%HOMEPATH%/.gitignore
