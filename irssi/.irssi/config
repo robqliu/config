@@ -263,6 +263,7 @@ settings = {
     nick = "***REMOVED***";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { autolog = "no"; };
 };
 ignores = (
   { mask = "Java"; level = "ALL"; },
@@ -272,5 +273,6 @@ ignores = (
   { mask = "war877"; level = "ALL"; },
   { mask = "war632"; level = "ALL"; },
   { mask = "_veer"; level = "ALL"; },
-  { mask = "Gnte"; level = "ALL"; }
+  { mask = "Gnte"; level = "ALL"; },
+  { mask = "LordyTired"; level = "ALL"; }
 );
