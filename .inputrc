@@ -1,0 +1,3 @@
+# Mac OS: Adds alt+left/right for word navigation in iTerm2
+"\e[1;9D": backward-word
+"\e[1;9C": forward-word
