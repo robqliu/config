@@ -6,7 +6,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # ******************* execs (widgets) ********************
-exec nm-applet
+exec --no-startup-id nm-applet
 
 # ******************* Fonts ********************
 # font for window titles. ISO 10646 = Unicode

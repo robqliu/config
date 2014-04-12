@@ -69,7 +69,7 @@
 "Set startpage.com as the default search when using :open/:tabopen
 :set defsearch=duckduckgo
 
-"tab numbers (#gt)
+"tab numbers (#b)
 :set guioptions+=n
 
 "visual bell
