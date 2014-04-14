@@ -8,10 +8,10 @@ in their own color.
 -use :scriptnames to check file sourcing.
 
 Windows
--$HOME/_vimrc -> .vimrc
--$HOME/_gvimrc -> .gvimrc
+-$HOME/.vimrc -> .vimrc
+-$HOME/.gvimrc -> .gvimrc
 -$HOME/vimfiles -> .vim/
--$VIM/_vimrc -> $VIM/vimrc
+	Git Bash doesn't seem to work, so I just copy the files here
 
 unix
 -$HOME/.vimrc -> .vimrc

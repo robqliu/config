@@ -12,6 +12,7 @@ au!
 " the previous augroup at the end
 
 " ============================ OS specific  ============================ 
+" auto source .vimrc when .vimrc is written to
 if has("win32") || has("win64")
 	au BufWritePost .vimrc source $MYVIMRC
 elseif has("unix")
@@ -31,6 +32,7 @@ set visualbell		" replaces error beep
 set ruler		" display cursor position on statusline
 set showcmd		" displays some status information for a command (e.g.
 			" the number of lines when selecting multiple lines
+set backspace=indent,eol,start " backspace over more things
 
 " color settings
 set t_Co=256
