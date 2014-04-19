@@ -1,3 +1,6 @@
+# set prompt
+export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h\[\e[0m\] \[\e[0;33m\]\w\[\e[0m\]$ '
+
 # no terminal beep
 set nobeep
 
@@ -40,8 +43,7 @@ export LS_COLORS='rs=0:di=01;04;33:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=
 export GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=01;32:ln=32:bn=32:se=36'
 
 # ruby
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# Only source if the script returns a 0. Short circuit otherwise
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # 18349 cross-compiler
