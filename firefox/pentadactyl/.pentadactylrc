@@ -70,7 +70,7 @@
 :set defsearch=duckduckgo
 
 "tab numbers (#b)
-:set guioptions+=n
+:set guioptions+=nT
 
 "visual bell
 :set visualbell
