@@ -1,5 +1,5 @@
 # set prompt
-export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h\[\e[0m\] \[\e[0;33m\]\w\[\e[0m\]$ '
+export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h \[\e[1;33m\]\w\[\e[0m\]$ '
 
 # no terminal beep
 set nobeep
