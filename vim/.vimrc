@@ -4,12 +4,9 @@ set nocompatible
 
 " remove all autocmds in this group (all autocmds in this vimrc 
 " use the same group). allows sourcing this .vimrc multiple times without
-" accidentally redefining autocmds (<- what's actually wrong with this? no
-" idea))
+" accidentally redefining autocmds (TODO: what's actually wrong with this?)
 augroup uservimrc
 au!
-" all autocmds defined below will be in uservimrc... we restore
-" the previous augroup at the end
 
 " ============================ OS specific  ============================ 
 " auto source .vimrc when .vimrc is written to
@@ -45,9 +42,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'
 nmap <F8> :TagbarToggle<CR>
 
 " ctags
-" Search for tags in current file's directory up to root
-" Search for .git/tags in current file's directory up to root
+" Search for tags and .git/tags in current file's directory up to root
 set tags=./tags;/,./.git/tags;/
 
-" restore the normal augroup
 augroup end
