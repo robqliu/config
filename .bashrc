@@ -1,5 +1,33 @@
-# set prompt
-export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h \[\e[1;33m\]\w\[\e[0m\]$ '
+# Prompt stuff is largely stolen from
+# https://github.com/jimeh/git-aware-prompt
+# https://stackoverflow.com/questions/1593051/how-to-programmatically-determine-the-current-checked-out-git-branch
+# gets branch. Sets to variable since backticks requires forking
+set_ps1_git_status() {
+	local branchOrHash
+	local staged
+	local modified
+	branchOrHash=$(git symbolic-ref --short -q HEAD 2> /dev/null)
+	if [[ $? -eq 0 ]]
+	then
+		ps1_git_status="($branchOrHash"
+		if [[ $(git diff-index HEAD 2> /dev/null) ]]
+		then
+			ps1_git_status+="*"
+		fi
+		ps1_git_status+=")"
+	else
+		branchOrHash=$(git rev-parse --short HEAD 2> /dev/null)
+		if [[ $? -eq 0 ]]
+		then
+			ps1_git_status="($branchOrHash)"
+		else
+			ps1_git_status=""
+		fi
+	fi
+}
+# update $ps1_git_status when printing prompt
+PROMPT_COMMAND='set_ps1_git_status $PROMPT_COMMAND'
+export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h\[\e[1;37m\]|\[\e[1;33m\]\w\[\e[0m\] $ps1_git_status\n$ '
 
 # no terminal beep
 set nobeep
