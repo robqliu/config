@@ -20,7 +20,7 @@ endif
 let colors_name = "robert"
 
 " General colors
-hi Normal		ctermfg=254		ctermbg=233		cterm=none		guifg=#e4e4e4	guibg=#1c1c1c	gui=none
+hi Normal		ctermfg=254		ctermbg=232		cterm=none		guifg=#e4e4e4	guibg=#1c1c1c	gui=none
 hi Cursor		ctermfg=234		ctermbg=228		cterm=none		guifg=#1c1c1c	guibg=#ffff87	gui=none
 hi Visual		ctermfg=251		ctermbg=239		cterm=none		guifg=#c6c6c6	guibg=#4e4e4e	gui=none
 hi VisualNOS	ctermfg=251		ctermbg=236		cterm=none		guifg=#c3c6ca	guibg=#303030	gui=none

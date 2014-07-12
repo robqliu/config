@@ -23,18 +23,21 @@ URxvt*font: xft:inconsolata:size=10
 
 ! 
 ! URxvt*color1       (red)              = Red3
+URxvt*color1: #ff3333
 
 ! 
 ! URxvt*color2       (green)            = Green3
+URxvt*color2: #87d75f
 
 ! 
 ! URxvt*color3       (yellow)           = Yellow3
-!URxvt*color3: Black
+URxvt*color3: #ffff33
 
 ! 
 ! URxvt*color4       (blue)             = Blue3
+URxvt*color4: #949dff
 
-! 
+!
 ! URxvt*color5       (magenta)          = Magenta3
 
 ! 
@@ -57,6 +60,7 @@ URxvt*font: xft:inconsolata:size=10
 
 ! 
 ! URxvt*color12      (bright blue)      = Blue
+URxvt*color12: #4b4bf0
 
 ! 
 ! URxvt*color13      (bright magenta)   = Magenta
