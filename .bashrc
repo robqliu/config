@@ -1,5 +1,5 @@
 # set prompt
-export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h\[\e[1;37m\] \[\e[1;33m\]\w\[\e[0;34m\] $ps1_git_status\[\e[0m\]\n$ '
+export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h\[\e[1;37m\] \[\e[0;33m\]\w\[\e[0;34m\] $ps1_git_status\[\e[0m\]\n$ '
 
 # no terminal beep
 set nobeep
