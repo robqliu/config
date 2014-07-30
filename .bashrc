@@ -4,10 +4,10 @@ export PS1='\[\e[0;32m\]\u\[\e[0;33m\]@\[\e[0m\]\h\[\e[1;37m\] \[\e[0;33m\]\w\[\
 # no terminal beep
 set nobeep
 
-export EDITOR=/usr/bin/vim
+export EDITOR=vim
 
 # svn
-export SVN_EDITOR=/usr/bin/vim
+export SVN_EDITOR=vim
 export GREP_OPTIONS=--exclude-dir=".svn"
 
 # add color to ls and grep if possible. This must be run before exporting
