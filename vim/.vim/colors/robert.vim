@@ -50,6 +50,8 @@ hi DiffDelete	ctermfg=234	ctermbg=60	cterm=NONE	guifg=#242424	guibg=#3e3969	gui=
 hi DiffText					ctermbg=53	cterm=NONE					guibg=#73186e	gui=NONE
 hi DiffChange				ctermbg=237								guibg=#382a37
 
+" Misc (?)
+hi ColorColumn ctermbg=28
 "hi CursorIM
 "hi Directory
 "hi IncSearch

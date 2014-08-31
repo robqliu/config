@@ -30,6 +30,7 @@ set ruler		" display cursor position on statusline
 set showcmd		" displays some status information for a command (e.g.
 			" the number of lines when selecting multiple lines
 set backspace=indent,eol,start " backspace over more things
+set colorcolumn=-0	" puts a column marker 0 characters to the left of textwidth
 
 " ============================ Aliases ============================
 " Taken from http://stackoverflow.com/a/16625961
