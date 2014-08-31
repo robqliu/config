@@ -70,7 +70,8 @@ alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes -
 
 # clang flags
 alias clang='clang -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings'
-alias clang++='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings'
+# I don't actually code c++ so who cares about portability
+alias clang++='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings -Wno-c++11-extensions'
 
 if type -P ack-grep > /dev/null 2>&1; then
 	alias ack='ack-grep'
