@@ -8,7 +8,7 @@ set nocompatible
 augroup uservimrc
 au!
 
-" ============================ OS specific  ============================ 
+" ============================ OS specific  ============================
 " auto source .vimrc when .vimrc is written to
 if has("win32") || has("win64")
 	au BufWritePost .vimrc source $MYVIMRC
@@ -16,7 +16,7 @@ elseif has("unix")
 	au BufWritePost .vimrc source %
 endif
 
-" ============================ General ============================ 
+" ============================ General ============================
 " turns on filetype detection, filetype plugins, and filetype indent files
 filetype plugin indent on
 
@@ -31,18 +31,25 @@ set showcmd		" displays some status information for a command (e.g.
 			" the number of lines when selecting multiple lines
 set backspace=indent,eol,start " backspace over more things
 
+" ============================ Aliases ============================
+" Taken from http://stackoverflow.com/a/16625961
+command -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
+
+" ============================ Color ============================
 " color settings
 set t_Co=256
 colo robert
 
-" save cursor location when closing/opening file
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
+" ============================ Plugins ============================
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
 " ctags
 " Search for tags and .git/tags in current file's directory up to root
 set tags=./tags;/,./.git/tags;/
+
+" ============================ Misc ============================
+" save cursor location when closing/opening file
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
 augroup end
