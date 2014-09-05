@@ -16,3 +16,5 @@
 	ui = true
 [push]
 	default = simple
+[log]
+	decorate = true
