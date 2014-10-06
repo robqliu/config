@@ -3,14 +3,6 @@
 "http://superuser.com/a/98839/235866
 
 
-""""""""""Aesthetics
-:highlight Hint font-weight: bold !important; font-size: 11px !important; font-family: monospace !important; padding: 0 0 0 0px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform:uppercase;
-":highlight HintElem /* The hintable element */ background-color: yellow !important; color: black !important; min-width: 12px; display: inline-block;
-:highlight TabNumber font-weight: bold !important; font-size: 14px !important; font-family: monospace !important; margin: 0px; padding-right: .3ex; cursor: default;
-:highlight FontFixed -append font-size: 13px;
-:highlight TabText -append font-size: 13px;
-
-
 """"""""""Bindings
 "Scrolling
 :map -builtin j 13j
@@ -59,6 +51,7 @@
 "use chars instead of the silly number system
 :set hintkeys=asdfjklertuioxcvnm
 
+:highlight Hint font-weight: bold !important; font-size: 11px !important; font-family: monospace !important; letter-spacing: 1px; padding: 0 0 0 0px; background: rgba(255, 255, 115, 1.0); color: black; text-transform:uppercase;
 "Removes the hint text
 :highlight Hint::after content: attr(number) !important;
 :highlight HintElem background-color: #71ef7c !important; color: black !important;
@@ -78,3 +71,6 @@
 "visual bell
 :set visualbell
 
+:highlight TabNumber font-weight: bold !important; font-size: 14px !important; font-family: monospace !important; margin: 0px; padding-right: .3ex; cursor: default;
+:highlight FontFixed -append font-size: 13px;
+:highlight TabText -append font-size: 13px;
