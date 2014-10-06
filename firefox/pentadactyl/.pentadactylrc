@@ -54,13 +54,14 @@
 
 """"""""""Hints
 "Fix hinttags so it finds more elements
-:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,a:not([display=none]),[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true],[cursor=pointer],.button,svg
+:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,a:not([display=none]),[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true],[class*="toggle"],.button
 
 "use chars instead of the silly number system
 :set hintkeys=asdfjklertuioxcvnm
 
-"Remove the hint text
+"Removes the hint text
 :highlight Hint::after content: attr(number) !important;
+:highlight HintElem background-color: #71ef7c !important; color: black !important;
 
 """"""""""Site-specific
 "gmail tabbing
