@@ -54,7 +54,7 @@
 
 """"""""""Hints
 "Fix hinttags so it finds more elements
-:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,a,[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true]
+:set hinttags=:-moz-any-link,area,button,iframe,input:not([type=hidden]),label[for],select,textarea,a:not([display=none]),[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[tabindex],[role=link],[role=button],[contenteditable=true],[cursor=pointer],.button,svg
 
 "use chars instead of the silly number system
 :set hintkeys=asdfjklertuioxcvnm
