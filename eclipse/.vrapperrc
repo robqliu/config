@@ -1,0 +1,3 @@
+eclipseaction correctIndentation org.eclipse.jdt.ui.edit.text.java.indent
+nmap == :correctIndentation<enter>
+vmap = :correctIndentation<enter>
