@@ -10,22 +10,13 @@ exec --no-startup-id nm-applet
 
 # ******************* Fonts ********************
 # font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:Ubuntu, Bold 10
-#font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 
 # ******************* Colors ********************
 # class			border	backgr.	text	indicator
 client.focused		#5fed5f	#5fed5f	#000000	#ffffff
 client.focused_inactive #dba348 #dba348 #000000	#ffffff
 client.unfocused        #333333 #000000 #a1a1a1 #ffffff
-#client.unfocused        #171717 #171717 #a1a1a1 #ffffff
-
-# defaults
-#client.focused          #4c7899 #285577 #ffffff #2e9ef4
-#client.focused_inactive #333333 #5f676a #ffffff #484e50
-#client.unfocused        #333333 #222222 #888888 #292d2e
-#client.urgent           #2f343a #900000 #ffffff #900000
 
 # ******************* Defaults ********************
 default_orientation horizontal
@@ -212,17 +203,4 @@ bar {
 		focused_workspace	#8bf13c	#439400 #000000
 		active_workspace	#fffa40 #ffff00 #000000
 	}
-
-	# defaults
-#	colors {
-#		background #000000
-#		statusline #ffffff
-#		separator #666666
-
-#		colorclass		border	backgr.	text
-#		focused_workspace  #4c7899 #285577 #ffffff
-#		active_workspace   #333333 #5f676a #ffffff
-#		inactive_workspace #333333 #222222 #888888
-#		urgent_workspace   #2f343a #900000 #ffffff
-#	}
 }
