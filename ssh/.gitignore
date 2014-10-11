@@ -1,1 +1,4 @@
+# private key...
 id_rsa
+# spammy and not really cross-machine
+known_hosts
