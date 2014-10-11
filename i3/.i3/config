@@ -110,7 +110,8 @@ bindsym $mod+0 workspace 10
 
 # ******************* Resize mode ********************
 # resize window (you can also use the mouse for that)
-mode "resize" {
+set $mode_resize "resize"
+mode $mode_resize {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -144,8 +145,7 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode $mode_resize
 
 # ******************* Audio Bindings ********************
 # Laptop
@@ -176,6 +176,22 @@ bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 bindsym Mod4+d exec dmenu_run
+
+# ******************* System mode ********************
+set $mode_system "Lock (L), Logout (E), Suspend (S), Hibernate (H), Reboot (R), Shutdown (Shift+S), Return/Esc to exit"
+mode $mode_system {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym Mod4+l mode $mode_system
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
