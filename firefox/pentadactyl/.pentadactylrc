@@ -54,7 +54,7 @@
 :highlight Hint font-weight: bold !important; font-size: 11px !important; font-family: monospace !important; letter-spacing: 1px; padding: 0 0 0 0px; background: rgba(255, 255, 115, 1.0); color: black; text-transform:uppercase;
 "Removes the hint text
 :highlight Hint::after content: attr(number) !important;
-:highlight HintElem background-color: #71ef7c !important; color: black !important;
+:highlight HintElem background-color: #71ef7c !important; color: black !important; opacity: 0.6;
 
 """"""""""Site-specific
 "gmail tabbing
