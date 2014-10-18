@@ -18,6 +18,7 @@ URxvt*scrollTtyKeypress: True
 URxvt*font: xft:inconsolata:size=10
 
 ! ******************************* Colors *******************************
+! Some default colors are nigh illegible on my choice of black background
 !
 ! URxvt*color0       (black)            = Black
 
