@@ -1,5 +1,6 @@
 from ranger.gui.color import *
 from ranger.gui.colorscheme import ColorScheme
+import curses
 
 class Robert(ColorScheme):
     # fg
@@ -9,8 +10,9 @@ class Robert(ColorScheme):
     LIGHT_BLUE = 111
     LIGHT_GRAY = 252
     LIGHT_ORANGE = 179
+    PURPLE = 183
     RED = 1
-    TEAL = 44
+    YELLOW = 3
 
     # bg
     DARK_GRAY = 235
@@ -30,7 +32,7 @@ class Robert(ColorScheme):
                     fg = self.RED
                     bg = self.DARK_GRAY
             elif context.directory:
-                fg = self.GREEN
+                fg = self.YELLOW
             elif context.tab:
                 if context.good:
                     fg = self.GREEN
@@ -39,7 +41,7 @@ class Robert(ColorScheme):
                 bg = self.DARK_GRAY
             # Symlink dirs on the current path
             elif context.link:
-                fg = self.TEAL
+                fg = self.PURPLE
         elif context.in_statusbar:
             # Loading bar
             if context.loaded:
@@ -54,7 +56,7 @@ class Robert(ColorScheme):
                 attr |= bold
                 fg = self.GREEN
                 return fg, bg, attr
-            # TODO: Not sure what this does
+            # TODO: Not sure what this is for
             elif context.message and context.bad:
                 attr |= bold
                 fg = self.RED
@@ -64,13 +66,22 @@ class Robert(ColorScheme):
                 fg = self.GRAY
                 return fg, bg, attr
 
-            if context.empty or context.error:
+            if context.tag_marker:
+                attr |= normal
+                if fg is self.RED:
+                    fg = white
+                else:
+                    fg = self.RED
+                return fg, bg, attr
+
+            if context.empty or context.error or context.bad:
                 fg = black
                 bg = self.RED
                 return fg, bg, attr
 
             if context.directory:
-                fg = self.GREEN
+                attr |= bold
+                fg = self.YELLOW
             elif context.media:
                 if context.image:
                     fg = self.BRONZE
@@ -85,35 +96,27 @@ class Robert(ColorScheme):
                     fg = self.GRAY
                 else:
                     fg = self.BRONZE
+            elif context.executable:
+                attr |= bold
+                fg = self.GREEN
+            elif context.link:
+                fg = self.PURPLE
             else:
                 fg = self.LIGHT_GRAY
                 attr = normal
 
-            if context.link:
-                attr |= bold
-                if not context.directory:
-                    if context.good:
-                        fg = self.TEAL
-                    else:
-                        fg = self.RED
-
             if context.selected:
                 attr |= bold | reverse
-            else:
-                # TODO: Do I need this?
-                if context.tag_marker:
-                    if fg in (self.RED, magenta):
-                        fg = white
-                    else:
-                        fg = self.RED
-                    attr |= bold
-                if (context.cut or context.copied):
-                    attr |= bold | reverse
-                    fg = self.LIGHT_GRAY
+                bg = black
+            elif context.cut or context.copied:
+                attr |= bold | reverse
+                fg = self.YELLOW
+                if context.cut:
                     bg = self.RED
+                else:
+                    bg = self.GREEN
 
             if context.marked:
-                attr |= bold
-                bg = self.DARK_GRAY
+                attr |= underline
 
         return fg, bg, attr
