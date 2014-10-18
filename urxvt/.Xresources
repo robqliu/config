@@ -10,7 +10,7 @@ URxvt*scrollTtyOutput: False
 ! scroll with scrollback buffer when tty receives new lines (i.e.  try to show the same lines) and scrollTtyOutput is false
 URxvt*scrollWithBuffer: True
 
-! scroll to bottom when a non-special key is pressed. Special keys are those which are intercepted by rxvt-unicode for 
+! scroll to bottom when a non-special key is pressed. Special keys are those which are intercepted by rxvt-unicode for
 ! special handling and are not passed onto the shell
 URxvt*scrollTtyKeypress: True
 
@@ -21,54 +21,54 @@ URxvt*font: xft:inconsolata:size=10
 !
 ! URxvt*color0       (black)            = Black
 
-! 
+!
 ! URxvt*color1       (red)              = Red3
 URxvt*color1: #ff3333
 
-! 
+!
 ! URxvt*color2       (green)            = Green3
 URxvt*color2: #87d75f
 
-! 
+!
 ! URxvt*color3       (yellow)           = Yellow3
 URxvt*color3: #ffff33
 
-! 
+!
 ! URxvt*color4       (blue)             = Blue3
 URxvt*color4: #949dff
 
 !
 ! URxvt*color5       (magenta)          = Magenta3
 
-! 
+!
 ! URxvt*color6       (cyan)             = Cyan3
 
-! 
+!
 ! URxvt*color7       (white)            = AntiqueWhite
 
-! 
+!
 ! URxvt*color8       (bright black)     = Grey25
 
-! 
+!
 ! URxvt*color9       (bright red)       = Red
 
-! 
+!
 ! URxvt*color10      (bright green)     = Green
 
-! 
+!
 ! URxvt*color11      (bright yellow)    = Yellow
 
-! 
+!
 ! URxvt*color12      (bright blue)      = Blue
 URxvt*color12: #4b4bf0
 
-! 
+!
 ! URxvt*color13      (bright magenta)   = Magenta
 
-! 
+!
 ! URxvt*color14      (bright cyan)      = Cyan
 
-! 
+!
 ! URxvt*color15      (bright white)     = White
 
 URxvt.foreground: White
@@ -101,7 +101,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! Use the specified colour for the colour value n, where 0-7 corresponds to low-
 ! URxvt*colorn: colour
 
-! 
+!
 ! URxvt*colorBD: colour
 
 ! Use the specified colour to display bold or italic characters when the foreground
@@ -175,7 +175,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 ! URxvt*boldFont: fontlist
 
-! 
+!
 ! URxvt*italicFont: fontlist
 
 ! The font list to use for displaying bold, italic or bold italic characters,
@@ -277,7 +277,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! The characters used as delimiters for double-click word selection (whitespace
 ! URxvt*cutchars: string
 
-! 
+!
 ! URxvt*{|}
 
 ! OverTheSpot, OffTheSpot, Root; option -pt.
@@ -352,16 +352,16 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! Turn on/off ISO 14755 5.2 mode (default enabled).@@@@THE SCROLLBAR
 ! URxvt*iso14755_52: boolean
 
-! 
+!
 ! URxvt*can be scrolled back using the scrollbar or by keystrokes. The normal urxvt scrollbar
 
-! 
+!
 ! URxvt*has arrows and its behaviour is fairly intuitive. The xterm-scrollbar is without
 
 ! Scroll down with Button1 (xterm-scrollbar) or Shift-Next.  Scroll up with Button3
 ! URxvt*arrows and its behaviour mimics that of xterm
 
-! 
+!
 ! URxvt*selection/insertion, hold either the Shift or the Meta (Alt) key while performing the
 
 ! If mouse reporting mode is active, the normal scrollbar actions are disabled -- on the
@@ -370,7 +370,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! Button3 sends ESC [ 6 ~ (Next) and ESC [ 5 ~ (Prior), respectively. Similarly,
 ! URxvt*assumption that we are using a fullscreen application. Instead, pressing Button1 and
 
-! 
+!
 ! URxvt*clicking on the up and down arrows sends ESC [ A (Up) and ESC [ B (Down),
 
 ! THE SELECTION: SELECTING AND PASTING TEXT
@@ -384,22 +384,22 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 ! URxvt*rxvt-unicode will automatically re-apply these fonts to the output so far.
 
-! 
+!
 ! URxvt*codes using the keyboard. It consists of 4 parts. The first part is available if rxvt-
 
-! 
+!
 ! URxvt*unicode has been compiled with "--enable-frills", the rest is available when rxvt-
 
 ! ·   5.1: Basic method
 ! URxvt*unicode was compiled with "--enable-iso14755".
 
-! 
+!
 ! URxvt*urxvt tries to write an entry into the utmp(5) file so that it can be seen via the
 
-! 
+!
 ! URxvt*who(1) command, and can accept messages.  To allow this feature, urxvt may need to be
 
-! 
+!
 ! URxvt*installed setuid root on some systems or setgid to root or to some other group on
 
 ! COLOURS AND GRAPHICS
@@ -409,7 +409,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! URxvt*of the same, and 72 (or 240 in 256 colour mode) colours arranged in an 4x4x4 (or
 
 
-! 
+!
 ! URxvt*cursorColor, cursorColor2, colorBD, colorUL as a number 0-15, as a convenient
 
 ! The following text gives values for the standard 88 colour mode (and values for the
@@ -418,13 +418,13 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! Together, all those colours implement the 88 (256) colour xterm colours. Only the
 ! URxvt*to 25/26 in 1/26 steps) - black and white are already part of the RGB cube.
 
-! 
+!
 ! URxvt*first 16 can be changed using resources currently, the rest can only be changed via
 
 ! Applications are advised to use terminfo or command sequences to discover number and
 ! URxvt*command sequences ("escape codes").
 
-! 
+!
 ! URxvt*foreground/background colours. This is in contrast to xterm(1) where the colours are
 
 ! urxvt -fg Black -bg White -rv
@@ -439,25 +439,25 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! For example, "[50]red" is a half-transparent red, while "[95]#00ff00" is an almost
 ! URxvt*opacity of the colour, where 0 is completely transparent and 100 is completely opaque.
 
-! 
+!
 ! URxvt*opaque green. This is the recommended format to specify transparency values, and works
 
 ! For complete control, rxvt-unicode also supports "rgba:rrrr/gggg/bbbb/aaaa" (exactly
 ! URxvt*with all ways to specify a colour.
 
-! 
+!
 ! URxvt*four hex digits/component) colour specifications, where the additional "aaaa"
 
-! 
+!
 ! URxvt*component specifies opacity (alpha) values. The minimum value of 0000 is completely
 
-! 
+!
 ! URxvt*transparent, while "ffff" is completely opaque). The two example colours from earlier
 
 ! You probably need to specify "-depth 32", too, to force a visual with alpha channels,
 ! URxvt*could also be specified as "rgba:ff00/0000/0000/8000" and "rgba:0000/ff00/0000/f332".
 
-! 
+!
 ! URxvt*and have the luck that your X-server uses ARGB pixel layout, as X is far from just
 
 ! For example, the following selects an almost completely transparent black background,
@@ -469,13 +469,13 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! When using a background pixmap or pseudo-transparency, then the background colour will
 ! URxvt*to your compositing manager (most interpret it as transparency of course).
 
-! 
+!
 ! URxvt*always behave as if it were completely transparent (so the background image shows
 
-! 
+!
 ! URxvt*instead), regardless of how it was specified, while other colours will either be
 
-! 
+!
 ! URxvt*transparent as specified (the background image will show through) on servers
 
 ! EXTENSION.
@@ -487,7 +487,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! TERM
 ! URxvt*urxvt sets and/or uses the following environment variables:
 
-! 
+!
 ! URxvt*urxvt(7), urxvtc(1), urxvtd(1), xterm(1), sh(1), resize(1), X(1), pty(4), tty(4),
 
 ! CURRENT PROJECT COORDINATOR
