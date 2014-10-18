@@ -1,5 +1,5 @@
 # Pro-tips
--You can see all the groups currently active with this command: >
+-You can see all the groups currently active with this command:
     :so $VIMRUNTIME/syntax/hitest.vim
 This will open a new window containing all highlight group names, displayed
 in their own color.
