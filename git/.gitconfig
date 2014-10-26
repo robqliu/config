@@ -4,6 +4,7 @@
 # Linux
 [core]
 	excludesfile = ~/.gitignore
+	whitespace = tab-in-indent
 # Windows
 #[core]
 #	excludesfile = %HOMEDRIVE%%HOMEPATH%/.gitignore
