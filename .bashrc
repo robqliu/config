@@ -71,9 +71,6 @@ alias clang='clang -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-string
 alias clang++='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings -Wno-c++11-extensions'
 alias cf='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings -Wno-c++11-extensions -m32'
 
-# I was dumb once
-alias rm='rm -I'
-
 if type -P ack-grep > /dev/null 2>&1; then
 	alias ack='ack-grep'
 fi
