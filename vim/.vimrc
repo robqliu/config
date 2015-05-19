@@ -34,7 +34,7 @@ set colorcolumn=+1	" puts a column marker 1 character to the right of textwidth
 
 " ============================ Aliases ============================
 " Taken from http://stackoverflow.com/a/16625961
-command -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
+command! -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
 
 " ============================ Color ============================
 " color settings
@@ -42,12 +42,7 @@ set t_Co=256
 colo robert
 
 " ============================ Plugins ============================
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" ctags
-" Search for tags and .git/tags in current file's directory up to root
-set tags=./tags;/,./.git/tags;/
+execute pathogen#infect()
 
 " ============================ Misc ============================
 " save cursor location when closing/opening file
