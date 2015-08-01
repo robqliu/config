@@ -31,6 +31,12 @@ set showcmd		" displays some status information for a command (e.g.
 			" the number of lines when selecting multiple lines
 set backspace=indent,eol,start " backspace over more things
 set colorcolumn=+1	" puts a column marker 1 character to the right of textwidth
+set laststatus=2	" keep the status line
+
+" Delete comment character when joining commented lines
+if v:version > 703 || v:version == 703 && has("patch541")
+	set formatoptions+=j
+endif
 
 " ============================ Aliases ============================
 " Taken from http://stackoverflow.com/a/16625961
