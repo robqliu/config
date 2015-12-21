@@ -10,7 +10,6 @@ export PATH=~/bin:$PATH
 
 # svn
 export SVN_EDITOR=vim
-export GREP_OPTIONS=--exclude-dir=".svn"
 
 # add color to ls and grep if possible. This must be run before exporting
 if [ -x /usr/bin/dircolors ]; 
