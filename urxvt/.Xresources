@@ -222,7 +222,7 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! URxvt*scrollBar_align: mode
 
 ! Save number lines in the scrollback buffer [default 64]. This resource is limited
-! URxvt*saveLines: number
+URxvt*saveLines: 100000
 
 ! Internal border of number pixels. This resource is limited to 100; option -b.
 ! URxvt*internalBorder: number
