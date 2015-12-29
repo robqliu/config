@@ -9,8 +9,8 @@
 # fix i3 status bar (so it displays nm-applet)
 exec --no-startup-id xrandr --output HDMI1 --primary
 exec --no-startup-id nm-applet
-#[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id ssh-add
 
 # ******************* Fonts ********************
 # font for window titles. ISO 10646 = Unicode
