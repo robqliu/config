@@ -2,11 +2,13 @@ Pro-tips
 --------
 - You can see all the groups currently active with this command:
 
+```
     :so $VIMRUNTIME/syntax/hitest.vim
+```
 
   This will open a new window containing all highlight group names, displayed
-  in their own color.(See: :help highlight)
-- Use :scriptnames to check file sourcing.
+  in their own color.(See: `:help highlight`)
+- Use `:scriptnames` to check file sourcing.
 
 Windows
 -------
