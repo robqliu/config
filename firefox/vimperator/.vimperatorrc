@@ -1,0 +1,40 @@
+""""""""""Bindings
+"Scrolling :noremap j 13j
+:noremap k 13k
+:noremap h 8h
+:noremap l 8l
+
+:map <S-J> :tabprevious<CR>
+:map <S-K> :tabnext<CR>
+
+""private window
+:map <C-S-n> :winopen<Space>-private<CR>
+
+
+"""""""""""Quickmarks
+:qmark g www.gmail.com
+:qmark s www.stackoverflow.com
+:qmark w www.weather.com/weather/today/Palo+Alto+CA+USCA0830:1:US
+:qmark m www.metafilter.com
+
+
+"""""""""""Hints
+"use chars instead of the silly number system
+:set hintchars=asdfjklertuioxcvnm
+
+:highlight Hint font-weight: bold !important; font-size: 11px !important; font-family: monospace !important; letter-spacing: 1px; padding: 0 0 0 0px; background: rgba(255, 255, 115, 1.0); color: black; text-transform:uppercase;
+"Removes the hint text
+:highlight Hint::after content: attr(number) !important;
+:highlight HintElem background-color: #71ef7c !important; color: black !important; opacity: 0.6;
+
+"""""""""""Misc
+"Set startpage.com as the default search when using :open/:tabopen
+":set defsearch=duckduckgo
+
+:set tabnumbers
+:set visualbell
+"remove nav bar
+:set gui=addons,nobookmarks,nomenu,nonavigation,tabs
+
+":highlight TabNumber font-weight: bold !important; font-size: 14px !important; font-family: monospace !important; margin: 0px; padding-right: .3ex; cursor: default;
+:highlight CmdLine background: white; color: black; font-size: 13px
