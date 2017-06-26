@@ -1,5 +1,6 @@
 """"""""""Bindings
-"Scrolling :noremap j 13j
+"Scrolling
+:noremap j 13j
 :noremap k 13k
 :noremap h 8h
 :noremap l 8l
@@ -7,7 +8,11 @@
 :map <S-J> :tabprevious<CR>
 :map <S-K> :tabnext<CR>
 
-""private window
+"Select all with C-a
+:noremap <C-a> <Insert><C-a><Insert>
+:inoremap <C-a> <Insert><C-a><Insert>
+
+"private window
 :map <C-S-n> :winopen<Space>-private<CR>
 
 
@@ -28,8 +33,7 @@
 :highlight HintElem background-color: #71ef7c !important; color: black !important; opacity: 0.6;
 
 """""""""""Misc
-"Set startpage.com as the default search when using :open/:tabopen
-":set defsearch=duckduckgo
+:set defsearch=duckduckgo
 
 :set tabnumbers
 :set visualbell
