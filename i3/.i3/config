@@ -112,7 +112,7 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# ******************* Resize mode ********************
+# ******************* Resize Mode ********************
 # resize window (you can also use the mouse for that)
 set $mode_resize "resize"
 mode $mode_resize {
@@ -150,6 +150,30 @@ mode $mode_resize {
         bindsym Escape mode "default"
 }
 bindsym $mod+r mode $mode_resize
+
+# ******************* App Passthrough Mode ********************
+# Don't want all i3 shortcuts in, say, intelliJ
+# Inspiration: https://faq.i3wm.org/question/3779/how-to-disable-shortcuts-in-fullscreen-app/
+set $mode_app_passthrough "app_passthrough"
+mode $mode_app_passthrough {
+	bindsym $mod+h focus left
+	bindsym $mod+j focus down
+	bindsym $mod+k focus up
+	bindsym $mod+l focus right
+
+	# kill focused window
+	bindsym $mod+Shift+Q kill
+
+	# change focus between tiling / floating windows
+	bindsym $mod+space focus mode_toggle
+
+	# toggle tiling / floating
+	bindsym $mod+Shift+space floating toggle
+
+	# exit this mode
+	bindsym $mod+Shift+i mode "default"
+}
+bindsym $mod+Shift+i mode $mode_app_passthrough
 
 # ******************* Audio Bindings ********************
 # Laptop
