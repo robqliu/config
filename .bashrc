@@ -70,9 +70,9 @@ alias clang='clang -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-string
 alias clang++='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings -std=c++11'
 alias cf='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings -Wno-c++11-extensions -m32'
 
-if type -P ack-grep > /dev/null 2>&1; then
-	alias ack='ack-grep'
-fi
+# java
+# TODO: Test that this works reasonably across platforms?
+export JAVA_HOME=$(readlink -f `which java` | sed "s:/jre/bin/java::")
 
 ################ OLD #################
 #18349 cross-compiler
