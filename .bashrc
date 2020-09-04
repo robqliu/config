@@ -74,6 +74,10 @@ alias cf='clang++ -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wwrite-strings
 # TODO: Test that this works reasonably across platforms?
 export JAVA_HOME=$(readlink -f `which java` | sed "s:/jre/bin/java::")
 
+if [ -x "$(command -v fzf)" ] && [ -x "$(command -v rg)" ]; then
+	export FZF_DEFAULT_COMMAND='rg --files -u --glob ""'
+fi
+
 ################ OLD #################
 #18349 cross-compiler
 export PATH=/usr/local/bin/opt/bin:$PATH

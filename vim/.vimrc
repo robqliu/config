@@ -49,6 +49,7 @@ colo robert
 
 " ============================ Plugins ============================
 execute pathogen#infect()
+set rtp+=/usr/local/opt/fzf
 
 " ============================ Misc ============================
 " save cursor location when closing/opening file
