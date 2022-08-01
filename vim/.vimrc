@@ -42,10 +42,10 @@ endif
 " Taken from http://stackoverflow.com/a/16625961
 command! -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
 
-" ============================ Color ============================
-" color settings
+" ============================ Visual ============================
 set t_Co=256
 colo robert
+set guifont=Consolas:h10:b:cANSI
 
 " ============================ Plugins ============================
 execute pathogen#infect()
