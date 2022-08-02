@@ -26,10 +26,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 
 Plug 'lervag/vimtex'
-let g:vimtex_view_general_viewer = 'SumatraPDF'
-let g:vimtex_view_general_options
-    \ = '-reuse-instance -forward-search @tex @line @pdf'
-let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+let g:vimtex_view_general_viewer = 'okular'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
