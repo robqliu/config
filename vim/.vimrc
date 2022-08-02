@@ -2,25 +2,40 @@
 " supposed to go first in the .vimrc
 set nocompatible
 
+set rtp+=~/vimfiles,/usr/local/opt/fzf
+
 " remove all autocmds in this group (all autocmds in this vimrc 
 " use the same group). allows sourcing this .vimrc multiple times without
 " accidentally redefining autocmds (TODO: what's actually wrong with this?)
 augroup uservimrc
 au!
 
-" ============================ OS specific  ============================
-" auto source .vimrc when .vimrc is written to
-if has("win32") || has("win64")
-	au BufWritePost .vimrc source $MYVIMRC
-elseif has("unix")
-	au BufWritePost .vimrc source %
-endif
+" source vimrc when saving files
+augroup myvimrc
+	au!
+	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+" ============================ Plugins ============================
+" Pathogen
+" execute pathogen#infect()
+
+" vim-plug
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+
+Plug 'lervag/vimtex'
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options
+    \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+
+" Initialize plugin system
+" - Automatically executes `filetype plugin indent on` and `syntax enable`.
+call plug#end()
 
 " ============================ General ============================
-" turns on filetype detection, filetype plugins, and filetype indent files
-filetype plugin indent on
-
-syntax on		" syntax highlighting
 set incsearch		" match while typing
 set number		" show line numbers
 set wildmenu		" adds menu when you do :e/:vsp/need to look at local 
@@ -46,10 +61,6 @@ command! -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
 set t_Co=256
 colo robert
 set guifont=Consolas:h10:b:cANSI
-
-" ============================ Plugins ============================
-execute pathogen#infect()
-set rtp+=/usr/local/opt/fzf
 
 " ============================ Misc ============================
 " save cursor location when closing/opening file
