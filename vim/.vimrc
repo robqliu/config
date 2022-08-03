@@ -55,8 +55,18 @@ endif
 command! -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
 
 " ============================ Visual ============================
-set t_Co=256
 colo robert
+if &term =~ '^xterm'
+	let &t_SI .= "\<Esc>[3 q"
+	let &t_EI .= "\<Esc>[2 q"
+	" 1 or 0 -> blinking block
+	" 2 -> solid block
+	" 3 -> blinking underscore
+	" 4 -> solid underscore
+	" Recent versions of xterm (282 or above) also support
+	" 5 -> blinking vertical bar
+	" 6 -> solid vertical bar
+endif
 set guifont=Consolas:h10:b:cANSI
 
 " ============================ Misc ============================
