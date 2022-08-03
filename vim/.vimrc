@@ -50,6 +50,15 @@ if v:version > 703 || v:version == 703 && has("patch541")
 	set formatoptions+=j
 endif
 
+" Yank to windows clipboard (WSL support)
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+
 " ============================ Aliases ============================
 " Taken from http://stackoverflow.com/a/16625961
 command! -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
