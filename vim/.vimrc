@@ -81,5 +81,3 @@ set guifont=Consolas:h10:b:cANSI
 " ============================ Misc ============================
 " save cursor location when closing/opening file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
-augroup end
