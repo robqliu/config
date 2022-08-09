@@ -27,6 +27,11 @@ Plug 'tpope/vim-sensible'
 
 Plug 'lervag/vimtex'
 let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_compiler_latexmk = {
+       \ 'options' : [
+       \   '-verbose',
+       \ ],
+       \}
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
