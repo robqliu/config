@@ -55,6 +55,9 @@ if v:version > 703 || v:version == 703 && has("patch541")
 	set formatoptions+=j
 endif
 
+" When formatting lists, vertically aligns after the list marker
+set formatoptions+=n
+
 " Yank to windows clipboard (WSL support)
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
 if executable(s:clip)
