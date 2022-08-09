@@ -2,3 +2,4 @@ bookmarks
 *.pyo
 tagged
 history
+__pycache__/
