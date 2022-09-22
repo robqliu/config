@@ -58,6 +58,9 @@ endif
 " When formatting lists, vertically aligns after the list marker
 set formatoptions+=n
 
+" auto-linewrap when using vimdiff (e.g. :windo diffthis)
+set diffopt+=followwrap
+
 " Yank to windows clipboard (WSL support)
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
 if executable(s:clip)
