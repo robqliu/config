@@ -59,15 +59,18 @@ endif
 set formatoptions+=n
 
 " auto-linewrap when using vimdiff (e.g. :windo diffthis)
-set diffopt+=followwrap
+" See https://github.com/tpope/vim-fugitive/issues/1523#issuecomment-987125279
+if v:version > 802 || v:version == 802 && has("patch2490")
+	set diffopt+=followwrap
+endif
 
 " Yank to windows clipboard (WSL support)
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
 if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
+	augroup WSLYank
+		autocmd!
+		autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+	augroup END
 endif
 
 " ============================ Aliases ============================
