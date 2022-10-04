@@ -89,6 +89,10 @@ if &term =~ '^xterm'
 endif
 set guifont=Consolas:h10:b:cANSI
 
+" Hack to deal with bad vim performance on extremely long lines
+" See https://superuser.com/a/302189
+set synmaxcol=4096
+
 " ============================ Misc ============================
 " save cursor location when closing/opening file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
