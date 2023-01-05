@@ -56,6 +56,7 @@ if v:version > 703 || v:version == 703 && has("patch541")
 endif
 
 " When formatting lists, vertically aligns after the list marker
+set autoindent
 set formatoptions+=n
 
 " auto-linewrap when using vimdiff (e.g. :windo diffthis)
