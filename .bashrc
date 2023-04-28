@@ -75,6 +75,10 @@ if [ -x "$(command -v fzf)" ] && [ -x "$(command -v rg)" ]; then
 	export FZF_DEFAULT_COMMAND='rg --files -u --glob ""'
 fi
 
+# Prevent ctrl+D from killing the shell. If we do it n times in a row it will actually close it. Otherwise
+# it emits an error message explaining why it isn't working (right now at least)
+IGNOREEOF=10
+
 ################ OLD #################
 #18349 cross-compiler
 export PATH=/usr/local/bin/opt/bin:$PATH
