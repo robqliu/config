@@ -15,7 +15,7 @@ URxvt*scrollWithBuffer: True
 URxvt*scrollTtyKeypress: True
 
 ! ******************************* Fonts *******************************
-URxvt*font: xft:inconsolata:size=10
+URxvt*font: xft:inconsolata:size=15
 
 ! ******************************* Colors *******************************
 ! Some default colors are nigh illegible on my choice of black background
@@ -77,11 +77,14 @@ URxvt.background: Grey10
 
 ! ******************************* Perl extensions *******************************
 ! font-size perl script
-URxvt.perl-ext-common: font-size
+! fix clipboard: https://unix.stackexchange.com/a/274877
+! NOTE: Spaces matter--don't use any between extension names!
+URxvt.perl-ext-common: font-size,selection-to-clipboard
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
 
 ! ******************************* Other settings *******************************
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
