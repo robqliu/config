@@ -11,6 +11,14 @@ export PATH=~/.cargo/bin:~/bin:$PATH
 export ANDROID_HOME=/usr/lib/android-sdk
 export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
 
+# Not sure if this is necessary for generating gpg keys... but I did it
+# https://superuser.com/a/1407685
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # svn
 export SVN_EDITOR=vim
 export GREP_OPTIONS=--exclude-dir=".svn"

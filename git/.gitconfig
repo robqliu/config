@@ -1,6 +1,7 @@
 [user]
-	name = robert
+	name = Robert Liu
 	email = none@none.com
+	#signingkey = 03FAA05FCCF82176
 # Linux
 [core]
 	excludesfile = ~/.gitignore
@@ -24,3 +25,5 @@
 	br = branch
 	ci = commit
 	st = status
+#[commit]
+	#gpgsign = true
