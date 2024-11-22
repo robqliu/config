@@ -6,7 +6,7 @@ set nobeep
 
 export EDITOR=vim
 
-export PATH=~/bin:$PATH
+export PATH=~/.cargo/bin:~/bin:$PATH
 
 # svn
 export SVN_EDITOR=vim
