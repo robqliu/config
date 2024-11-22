@@ -8,6 +8,9 @@ export EDITOR=vim
 
 export PATH=~/.cargo/bin:~/bin:$PATH
 
+export ANDROID_HOME=/usr/lib/android-sdk
+export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+
 # svn
 export SVN_EDITOR=vim
 export GREP_OPTIONS=--exclude-dir=".svn"
