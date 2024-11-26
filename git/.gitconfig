@@ -2,7 +2,7 @@
 	name = Robert Liu
 	email = none@none.com
 	#signingkey = 03FAA05FCCF82176
-# Linux
+# Linux/OSX
 [core]
 	excludesfile = ~/.gitignore
 	whitespace = tab-in-indent
@@ -25,5 +25,7 @@
 	br = branch
 	ci = commit
 	st = status
-#[commit]
-	#gpgsign = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
