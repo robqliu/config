@@ -54,3 +54,7 @@ fi
 # it emits an error message explaining why it isn't working (right now at least)
 IGNOREEOF=10
 
+# Fix using GPG as ssh key
+# https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation
+gpg-connect-agent updatestartuptty /bye > /dev/null
+
