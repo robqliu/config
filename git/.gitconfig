@@ -1,11 +1,12 @@
 [user]
 	name = Robert Liu
-	email = none@none.com
-	#signingkey = 03FAA05FCCF82176
+	email = 1217648+robqliu@users.noreply.github.com
 # Linux/OSX
 [core]
 	excludesfile = ~/.gitignore
 	whitespace = tab-in-indent
+	# For debugging
+	# sshCommand = "ssh -vv"
 # Windows
 #[core]
 #	excludesfile = %HOMEDRIVE%%HOMEPATH%/.gitignore

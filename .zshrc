@@ -54,7 +54,10 @@ fi
 # it emits an error message explaining why it isn't working (right now at least)
 IGNOREEOF=10
 
+# Seems necessary for GPG signing
+export GPG_TTY=$(tty)
 # Fix using GPG as ssh key
+# (TODO) Gave up on this since it's somehow still a total nightmare to setup. Use GPG for signing but not SSH instead, for now
 # https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation
-gpg-connect-agent updatestartuptty /bye > /dev/null
+# gpg-connect-agent updatestartuptty /bye > /dev/null
 
