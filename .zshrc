@@ -4,6 +4,7 @@ set nobeep
 export EDITOR=vim
 
 export PATH=~/.cargo/bin:~/bin:$PATH
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # svn
 export SVN_EDITOR=vim
