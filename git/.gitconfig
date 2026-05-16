@@ -1,6 +1,7 @@
 [user]
 	name = Robert Liu
 	email = 1217648+robqliu@users.noreply.github.com
+	signingkey = 245002588DC5655B
 # Linux/OSX
 [core]
 	excludesfile = ~/.gitignore
