@@ -4,7 +4,7 @@
 	signingkey = 245002588DC5655B
 # Linux/OSX
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 	whitespace = tab-in-indent
 	# For debugging
 	# sshCommand = "ssh -vv"
