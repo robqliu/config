@@ -97,6 +97,10 @@ set guifont=Consolas:h10:b:cANSI
 " See https://superuser.com/a/302189
 set synmaxcol=4096
 
+" Need for typescript files. Not sure how this is getting set to 1
+" anyways. See: https://stackoverflow.com/a/72231901
+set regexpengine=0
+
 " ============================ Misc ============================
 " save cursor location when closing/opening file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
