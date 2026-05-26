@@ -3,7 +3,7 @@ set nobeep
 
 export EDITOR=vim
 
-export PATH=~/.cargo/bin:~/bin:$PATH
+export PATH=~/.cargo/bin:~/bin:$PATH:~/.local/bin:$PATH
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # svn
@@ -30,7 +30,7 @@ export CLICOLOR=1
 
 # git auto-complete
 if type brew &>/dev/null; then
-	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+	FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
 
 	autoload -Uz compinit
 	compinit
