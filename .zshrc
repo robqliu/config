@@ -3,7 +3,9 @@ set nobeep
 
 export EDITOR=vim
 
-export PATH=~/.cargo/bin:~/bin:$PATH:~/.local/bin:$PATH
+# Dedupe path (only across multiple assignments)
+typeset -U path
+export PATH="$HOME/.cargo/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # svn
