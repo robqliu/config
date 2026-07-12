@@ -61,3 +61,5 @@ export GPG_TTY=$(tty)
 # (TODO) Sometimes this breaks. See:
 # https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation
 gpg-connect-agent updatestartuptty /bye > /dev/null
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
