@@ -64,4 +64,20 @@ export GPG_TTY=$(tty)
 # https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation
 gpg-connect-agent updatestartuptty /bye > /dev/null
 
+# vim's visual mode lets me highlight text in the current command I'm typing (i.e. for copying or modification)
+bindkey -v
+# ... but we need to add back a bunch of emacs stuff
+bindkey '^U' backward-kill-line
+bindkey '^K' kill-line
+bindkey '^R' history-incremental-search-backward
+bindkey '^W' backward-kill-word
+bindkey -M viins "\ef" forward-word    # Option+Right
+bindkey -M viins "\eb" backward-word   # Option+Left
+# ... and some stuff just to make things sane
+bindkey -M viins '^?' backward-delete-char # Otherwise, it emulates *old* vi behavior where we can't backspace
+                                           # past the point where we swapped to insert mode
+bindkey -M viins "\e[1;4C" undefined-key # Remove Option+Shift+Left from it's weird default behavior
+bindkey -M viins "\e[1;4D" undefined-key # Remove Option+Shift+Right from it's weird default behavior 
+KEYTIMEOUT=1 # 10ms to swap into normal mode after hitting 'esc'. Default appears to be 40 => 400ms
+
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
