@@ -1,5 +1,6 @@
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# OS_X 'path_helper' adds this already. So prevent deduplication
+#eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Not sure if this is necessary for generating gpg keys... but I did it
 # https://superuser.com/a/1407685
