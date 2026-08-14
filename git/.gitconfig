@@ -1,5 +1,6 @@
 [user]
 	name = Robert Liu
+	# Note: These are often overridden by .gitconfig.local
 	email = 1217648+robqliu@users.noreply.github.com
 	signingkey = 245002588DC5655B
 # Linux/OSX
@@ -31,3 +32,5 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
+[include]
+	path = ~/.gitconfig.local
