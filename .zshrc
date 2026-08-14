@@ -73,11 +73,20 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^W' backward-kill-word
 bindkey -M viins "\ef" forward-word    # Option+Right
 bindkey -M viins "\eb" backward-word   # Option+Left
+bindkey -M vicmd 'y' vi-yank-pbcopy
+bindkey -M visual 'y' vi-yank-pbcopy
 # ... and some stuff just to make things sane
 bindkey -M viins '^?' backward-delete-char # Otherwise, it emulates *old* vi behavior where we can't backspace
                                            # past the point where we swapped to insert mode
 bindkey -M viins "\e[1;4C" undefined-key # Remove Option+Shift+Left from it's weird default behavior
 bindkey -M viins "\e[1;4D" undefined-key # Remove Option+Shift+Right from it's weird default behavior 
+
+function vi-yank-pbcopy() {
+  zle vi-yank
+  echo -n "$CUTBUFFER" | pbcopy
+}
+zle -N vi-yank-pbcopy
+
 KEYTIMEOUT=1 # 10ms to swap into normal mode after hitting 'esc'. Default appears to be 40 => 400ms
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
