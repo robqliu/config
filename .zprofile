@@ -1,4 +1,3 @@
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Not sure if this is necessary for generating gpg keys... but I did it

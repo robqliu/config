@@ -6,8 +6,6 @@ export EDITOR=vim
 # Dedupe path (only across multiple assignments)
 typeset -U path
 export PATH="$HOME/.cargo/bin:$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH=~/Library/Python/3.9/bin:$PATH
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # svn
 export SVN_EDITOR=vim
@@ -57,8 +55,6 @@ fi
 # Prevent ctrl+D from killing the shell. If we do it n times in a row it will actually close it. Otherwise
 # it emits an error message explaining why it isn't working (right now at least)
 IGNOREEOF=10
-
-CLOUDFLARE_ACCOUNT_ID=0a220edac9835478437db240b15c8cf0
 
 # Seems necessary for GPG signing
 export GPG_TTY=$(tty)
