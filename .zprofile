@@ -1,4 +1,7 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+case ":$PATH:" in
+  *":/opt/homebrew/bin:"*) ;;
+  *) eval "$(/opt/homebrew/bin/brew shellenv)" ;;
+esac
 
 # Not sure if this is necessary for generating gpg keys... but I did it
 # https://superuser.com/a/1407685
